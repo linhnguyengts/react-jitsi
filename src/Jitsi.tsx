@@ -78,7 +78,8 @@ const Jitsi: React.FC<Props> = (props: Props) => {
             api.addEventListener('readyToClose', () => {
 
                 if(onHangUp){
-                   }onHangUp();
+                    onHangUp();
+                   }
             })
             
 
