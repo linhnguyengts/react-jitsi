@@ -44,7 +44,7 @@ export interface JitsiMeetAPIOptions {
         email?: string;
     };
 
-onHangUp?: () => void;
+
 }
 
 
@@ -1184,5 +1184,5 @@ export interface Props {
     userInfo?: {
         email?: string;
     };
-
+onHangUp?: () => void;
 }
