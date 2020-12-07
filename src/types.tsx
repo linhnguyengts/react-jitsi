@@ -43,6 +43,8 @@ export interface JitsiMeetAPIOptions {
     userInfo?: {
         email?: string;
     };
+
+onHangUp?: () => void;
 }
 
 
