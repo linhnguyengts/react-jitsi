@@ -20,6 +20,7 @@ const Jitsi: React.FC<Props> = (props: Props) => {
         jwt,
         devices,
         userInfo,
+        onHangUp
     } = { ...Default.Props, ...props }
 
     const [loading, setLoading] = useState(true)
@@ -73,6 +74,13 @@ const Jitsi: React.FC<Props> = (props: Props) => {
                     api.executeCommand('password', password)
 
             })
+            
+            api.addEventListener('readyToClose', () => {
+
+                if(onHangUp){
+                   }onHangUp();
+            })
+            
 
         } catch (error) { console.error('Failed to start the conference', error) }
 
